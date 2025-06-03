@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Barbearia - Agendamento</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    section { margin-bottom: 20px; }
+    #admin, #sistema, #login, #cadastro { display: none; }
+    button { margin: 5px 0; }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login">
+  <h2>Login</h2>
+  <input id="login-usuario" placeholder="Usuário"><br>
+  <input id="login-senha" placeholder="Senha" type="password"><br>
+  <button onclick="fazerLogin()">Entrar</button><br>
+  <small>Não tem conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se</a></small>
+</div>
+
+<div id="cadastro">
+  <h2>Cadastro</h2>
+  <input id="cadastro-usuario" placeholder="Usuário"><br>
+  <input id="cadastro-senha" placeholder="Senha" type="password"><br>
+  <button onclick="fazerCadastro()">Cadastrar</button><br>
+  <small>Já tem conta? <a href="#" onclick="mostrarLogin()">Login</a></small>
+</div>
+
+<div id="sistema">
+  <h2>Sistema</h2>
+  <button id="btn-admin" onclick="mostrarAdmin()" style="display:none;">Ir para Administração</button>
+  <button onclick="fazerLogout()">Logout</button>
+
+  <section id="agendamento">
+    <h3>Agendar Serviço</h3>
+    <form id="form-agendamento">
+      <select id="servico-select"></select><br>
+      <select id="profissional-select"></select><br>
+      <input id="data" type="date"><br>
+      <input id="hora" type="time"><br>
+      <button type="submit">Agendar</button>
+    </form>
+  </section>
+
+  <section id="agenda">
+    <h3>Minha Agenda</h3>
+    <ul id="minha-agenda"></ul>
+  </section>
+</div>
+
+<section id="admin">
+  <h2>Administração</h2>
+  <button onclick="adicionarServico()">Adicionar Serviço</button>
+  <button onclick="adicionarProfissional()">Adicionar Profissional</button>
+
+  <h3>Agendamentos realizados:</h3>
+  <ul id="lista-agendamentos"></ul>
+
+  <br>
+  <button onclick="voltarSistema()">Voltar ao Sistema</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

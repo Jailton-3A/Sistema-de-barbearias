@@ -11,7 +11,7 @@ Desenvolvido com **HTML**, **CSS** e **JavaScript** puro, com persistência de d
 
 ## Funcionalidades
 
-### 👤 Cliente
+###  Cliente
 - Visualizar lista de serviços com preços.
 - Selecionar profissional e agendar horário.
 - Cancelar ou reagendar um agendamento.
